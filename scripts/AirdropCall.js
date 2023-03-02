@@ -6,7 +6,8 @@ const { getContractAt } = require("@nomiclabs/hardhat-ethers/dist/src/helpers");
 require("dotenv").config();
 
 const TOKEN_ADDRESS = process.env.TOKEN_ADDRESS;
-const AIRDROP_ADDRESS = process.env.AIRDROP_ADDRESS;
+const RECEIVER_ADDRESS = process.env.RECEIVER_ADDRESS;
+const AMOUNT = process.env.AMOUNT;
 
 async function main() {
     [deployer] = await ethers.getSigners();
@@ -16,10 +17,9 @@ async function main() {
 
     console.log("Deploying contracts with the account:", deployer.address);
 
-    //airdrop
-    const airdrop = await dungToken.airdrop(AIRDROP_ADDRESS);
+    //airdrop (receiver, amount)
+    const airdrop = await dungToken.airdrop(RECEIVER_ADDRESS, AMOUNT);
     await airdrop.wait();
-
     
 }
 

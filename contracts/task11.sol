@@ -33,10 +33,6 @@ contract DungToken is ERC20, Ownable {
         uint256 _amount
     ) public onlyOwner {
         require(_amount > 0, "Amount must be greater than 0");
-        require(
-            balanceOf(address(this)) >= _amount * _receiver.length,
-            "Not enough balance to airdrop"
-        );
         for (uint256 i = 0; i < _receiver.length; i++) {
             if (whitelist[_receiver[i]] == true) {
                 _mint(_receiver[i], _amount);

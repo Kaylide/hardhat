@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "E:\\hardhat\\contracts\\task11.sol": {
-      "lastModificationDate": 1677738950165,
-      "contentHash": "14e708ac63c14cc4eef3d0856f3a8a66",
+      "lastModificationDate": 1677742581493,
+      "contentHash": "5528eee83a60583597514e062837e5fd",
       "sourceName": "contracts/task11.sol",
       "solcConfig": {
         "version": "0.8.2",

@@ -15,15 +15,16 @@ module.exports = {
             // gasPrice: 8000000000,
         },
         polygonTestnet: {
-            url: process.env.POLYGON_RPC_URL,
+            url: process.env.POLYGONSCAN_RPC_URL,
             accounts: [process.env.PRIVATE_KEY],
         },
     },
     etherscan: {
-        apiKey: {
-            bscTestnet: process.env.BSCSCAN_API,
-            polygonMumbai: process.env.POLYGON_API
-        },
+        // apiKey: {
+        //     bscTestnet: process.env.BSC_API_KEY,
+        //     polygonTestnet: process.env.POLYGONSCAN_API_KEY
+        // },
+        apiKey: process.env.POLYGONSCAN_API_KEY
     },
 };
 
