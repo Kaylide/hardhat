@@ -7,7 +7,7 @@ async function main() {
     console.log("Account balance:", (await deployer.getBalance()).toString());
   
     const Token = await ethers.getContractFactory("DungToken");
-    const token = await Token.deploy();
+    const token = await Token.deploy("DungToken", "DTK");
   
     console.log("Token address:", token.address);
   }
