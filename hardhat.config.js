@@ -1,5 +1,6 @@
 require("@nomiclabs/hardhat-waffle");
-require("@nomiclabs/hardhat-etherscan");
+require("@nomiclabs/hardhat-etherscan")
+require('@openzeppelin/hardhat-upgrades');
 require("dotenv").config();
 
 const fs = require('fs');
@@ -20,11 +21,11 @@ module.exports = {
         },
     },
     etherscan: {
-        // apiKey: {
-        //     bscTestnet: process.env.BSC_API_KEY,
+         apiKey: {
+            bscTestnet: process.env.BSC_API_KEY,
         //     polygonTestnet: process.env.POLYGONSCAN_API_KEY
-        // },
-        apiKey: process.env.POLYGONSCAN_API_KEY
+        },
+        //apiKey: process.env.POLYGONSCAN_API_KEY
     },
 };
 

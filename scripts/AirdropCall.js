@@ -1,12 +1,11 @@
 //Viết script để gọi hàm Airdrop này thông qua hardhat
 
 const { ethers, upgrades } = require("hardhat");
-const { getContractAt } = require("@nomiclabs/hardhat-ethers/dist/src/helpers");
 
 require("dotenv").config();
 
 const TOKEN_ADDRESS = process.env.TOKEN_ADDRESS;
-const RECEIVER_ADDRESS = process.env.RECEIVER_ADDRESS;
+const RECEIVER_ADDRESS = process.env.RECEIVER_ADDRESS.split(",");
 const AMOUNT = process.env.AMOUNT;
 
 async function main() {
